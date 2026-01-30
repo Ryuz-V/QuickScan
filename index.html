@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickScan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+<header>
+    <nav class="navbar-full-white">
+        <div class="navbar-content">
+            <a href="#" class="nav-logo">
+                <img src="/asset/e7f46ea6-9261-43f1-9b97-3eb8cc966431.png" alt="Logo QR Code Generator" class="nav-logo-img">
+            </a>
+            <div class="nav-lang">
+                <i class="fas fa-globe"></i>
+                <select id="language-select">
+                    <option value="id" selected>Bahasa Indonesia</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Judul dan deskripsi -->
+    <div class="header-content">
+        <h1><i class="fas fa-qrcode"></i> Generator QR Code</h1>
+        <p>Buat QR Code dari Link, Teks, atau Gambar PNG. File hasil akan dipisahkan berdasarkan tipe data untuk memudahkan pengelolaan.</p>
+    </div>
+</header>
+        
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="link">
+                    <i class="fas fa-link"></i> Dari Link
+                </button>
+                <button class="tab-btn" data-tab="text">
+                    <i class="fas fa-font"></i> Dari Teks
+                </button>
+                <button class="tab-btn" data-tab="image">
+                    <i class="fas fa-image"></i> Dari Gambar PNG
+                </button>
+            </div>
+            
+            <!-- Tab Link -->
+            <div class="tab-content active" id="link-tab">
+                <div class="input-group">
+                    <label for="link-input"><i class="fas fa-globe"></i> Masukkan URL/Link</label>
+                    <input type="url" id="link-input" placeholder="Contoh: https://www.example.com" value="https://www.google.com">
+                    <p style="margin-top: 8px; color: #6c757d; font-size: 0.9rem;">QR Code akan mengarahkan ke link yang dimasukkan</p>
+                </div>
+                <button class="btn" id="generate-link-btn">
+                    <i class="fas fa-bolt"></i> Buat QR Code
+                </button>
+            </div>
+            
+            <!-- Tab Teks -->
+            <div class="tab-content" id="text-tab">
+                <div class="input-group">
+                    <label for="text-input"><i class="fas fa-align-left"></i> Masukkan Teks</label>
+                    <textarea id="text-input" placeholder="Masukkan teks apa saja yang ingin diubah menjadi QR Code...">Contoh teks untuk diubah menjadi QR Code. Anda bisa memasukkan informasi kontak, pesan rahasia, atau data lainnya.</textarea>
+                </div>
+                <button class="btn" id="generate-text-btn">
+                    <i class="fas fa-bolt"></i> Buat QR Code
+                </button>
+            </div>
+            
+            <!-- Tab Gambar -->
+            <div class="tab-content" id="image-tab">
+                <div class="input-group">
+                    <label><i class="fas fa-file-image"></i> Unggah Gambar PNG</label>
+                    <div class="file-input-container">
+                        <input type="file" id="image-input" class="file-input" accept=".png">
+                        <label for="image-input" class="file-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <div>
+                                <strong>Klik untuk mengunggah gambar PNG</strong>
+                                <p>File akan dikonversi menjadi QR Code</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div id="selected-file-name" class="selected-file"></div>
+                    <p style="margin-top: 8px; color: #6c757d; font-size: 0.9rem;">Hanya file PNG yang didukung. Gambar akan dienkode menjadi format base64 dalam QR Code.</p>
+                </div>
+                <button class="btn" id="generate-image-btn">
+                    <i class="fas fa-bolt"></i> Buat QR Code
+                </button>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <h3><i class="fas fa-qrcode"></i> Hasil QR Code</h3>
+            <div class="qr-result">
+                <div class="qr-code-display">
+                    <div id="qrcode"></div>
+                    <p style="margin-top: 20px; color: #6c757d;">Pindai QR Code dengan kamera ponsel atau aplikasi QR scanner</p>
+                </div>
+                <div class="qr-actions">
+                    <div class="file-info">
+                        <h4><i class="fas fa-info-circle"></i> Informasi File</h4>
+                        <p id="file-info-text">Belum ada QR Code yang dibuat. Pilih tipe data dan buat QR Code terlebih dahulu.</p>
+                        <div id="file-type-badge" class="file-type"></div>
+                    </div>
+                    
+                    <h4 style="color: #495057; margin-bottom: 15px;"><i class="fas fa-download"></i> Unduh QR Code</h4>
+                    <p style="color: #6c757d; margin-bottom: 15px;">File akan disimpan dengan nama yang berbeda sesuai tipe data:</p>
+                    
+                    <div class="download-options">
+                        <button class="download-btn" id="download-png">
+                            <i class="fas fa-image"></i> Unduh sebagai PNG
+                        </button>
+                        <button class="download-btn" id="download-svg">
+                            <i class="fas fa-download"></i> Unduh sebagai SVG
+                        </button>
+                        <button class="download-btn" id="download-data">
+                            <i class="fas fa-file-code"></i> Simpan Data QR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-section">
+            <h3><i class="fas fa-history"></i> Riwayat QR Code</h3>
+            <div class="history-list" id="history-list">
+                <!-- Riwayat akan ditampilkan di sini -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
