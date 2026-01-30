@@ -19,7 +19,7 @@
 }
 
 /* Navbar Styles - FULL WIDTH */
-.navbar-full-white {
+.navbar {
     background-color: white;
     padding: 15px 0;
     width: 100vw;
@@ -111,7 +111,11 @@
             margin: 0 auto;
             line-height: 1.6;
         }
-        
+
+        .header-content {
+            margin-top: 50px;
+        }
+
         .tab-container {
             background-color: white;
             border-radius: 15px;
@@ -410,13 +414,90 @@
             font-size: 0.85rem;
         }
         
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: white;
-            opacity: 0.8;
-            font-size: 0.95rem;
-        }
+footer {
+    background-color: white;
+    padding: 20px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Copyright di kiri */
+.copyright {
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.copyright p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Social media icons di kanan */
+.social-media {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna khusus untuk setiap platform */
+.social-icon.facebook:hover {
+    background-color: #1877f2;
+    color: white;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+}
+
+.social-icon.github:hover {
+    background-color: #333;
+    color: white;
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+}
         
         @media (max-width: 768px) {
             header h1 {
