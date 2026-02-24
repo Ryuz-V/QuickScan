@@ -78,3 +78,18 @@ The application handles translations dynamically via JavaScript. Language prefer
 ## 📜 License
 
 © 2026 **NexaV Studio**. All rights reserved.
+
+
+
+
+[forks-shield]: https://img.shields.io/github/forks/Ryuz-V/QuickScan.svg?style=for-the-badge
+[forks-url]: https://github.com/Ryuz-V/BlindMaze_Game
+
+[stars-shield]: https://img.shields.io/github/stars/Ryuz-V/QuickScan.svg?style=for-the-badge
+[stars-url]: https://github.com/Ryuz-V/BlindMaze_Game/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/Ryuz-V/QuickScan.svg?style=for-the-badge
+[issues-url]: https://github.com/Ryuz-V/BlindMaze_Game/issues
+
+[license-shield]: https://img.shields.io/github/license/Ryuz-V/QuickScan.svg?style=for-the-badge
+[license-url]: https://github.com/Ryuz-V/QuickScan/blob/main/LICENSE
