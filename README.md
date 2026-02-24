@@ -3,7 +3,7 @@
 [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![Unlicense License][license-shield]][license-url]
 
 <p align="center">
-  <a href="https://ryuz-v.github.io/Space/" 
+  <a href="https://ryuz-v.github.io/QuickScan/" 
      target="_blank" 
      style="background-color: #c30000; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
      Deploy Now
