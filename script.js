@@ -429,7 +429,7 @@ const translations = {
     id: {
         // Header
         title: "Generator QR Code",
-        description: "Buat QR Code dari Link, Teks, atau Gambar PNG. File hasil akan dipisahkan berdasarkan tipe data untuk memudahkan pengelolaan.",
+        description: "Alat serba guna untuk membuat kode QR gratis, mengeditnya, dan melacak kinerja kampanye.",
 
         // Tabs
         tabLink: "Dari Link",
@@ -480,7 +480,7 @@ const translations = {
     en: {
         // Header
         title: "QR Code Generator",
-        description: "Create QR Codes from Links, Text, or PNG Images. Result files will be separated by data type for easier management.",
+        description: "Versatile tool to create free QR codes, edit them, and track campaign performance.",
 
         // Tabs
         tabLink: "From Link",
@@ -531,7 +531,7 @@ const translations = {
     es: {
         // Header
         title: "Generador de Código QR",
-        description: "Crea códigos QR desde Enlaces, Texto o Imágenes PNG. Los archivos resultantes se separarán por tipo de datos para una gestión más fácil.",
+        description: "Herramienta versátil para crear códigos QR gratuitos, editarlos y rastrear el rendimiento de la campaña.",
 
         // Tabs
         tabLink: "Desde Enlace",
@@ -582,7 +582,7 @@ const translations = {
     fr: {
         // Header
         title: "Générateur de Code QR",
-        description: "Créez des codes QR à partir de Liens, Texte ou Images PNG. Les fichiers résultats seront séparés par type de données pour une gestion plus facile.",
+        description: "Outil polyvalent pour créer des codes QR gratuits, les modifier et suivre les performances de la campagne.",
 
         // Tabs
         tabLink: "Depuis un Lien",
@@ -633,7 +633,7 @@ const translations = {
     de: {
         // Header
         title: "QR-Code-Generator",
-        description: "Erstellen Sie QR-Codes aus Links, Text oder PNG-Bildern. Die Ergebnisdateien werden nach Datentyp getrennt, um die Verwaltung zu erleichtern.",
+        description: "Vielseitiges Tool zum Erstellen kostenloser QR-Codes, Bearbeiten und Verfolgen der Kampagnenleistung.",
 
         // Tabs
         tabLink: "Aus Link",
