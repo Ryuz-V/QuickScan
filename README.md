@@ -1,3 +1,16 @@
+<div align="center">
+
+[![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![Unlicense License][license-shield]][license-url]
+
+<p align="center">
+  <a href="https://ryuz-v.github.io/Space/" 
+     target="_blank" 
+     style="background-color: #c30000; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+     Deploy Now
+  </a>
+</p>
+</div>
+
 # QuickScan - QR Code Generator
 
 A powerful, user friendly, and feature-rich QR Code Generator built with vanilla JavaScript. QuickScan allows users to generate QR codes from various data types including Links, Text, and Images, with support for multiple languages and export formats.
